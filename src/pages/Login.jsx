@@ -17,7 +17,8 @@ export default function Login() {
 
     if (foundUser) {
       login(foundUser);
-      navigate("/dashboard");
+      localStorage.setItem("loggedInUser", JSON.stringify(foundUser)); // Save logged-in user in localStorage
+      navigate("/dashboard"); // Redirect to dashboard
     } else {
       setError("Invalid email or password!");
     }
