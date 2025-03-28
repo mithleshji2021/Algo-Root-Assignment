@@ -1,14 +1,20 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
 import ProtectedRoute from "./components/ProtectedRoute";
-import NotFound from "./pages/PageNotFound";
+import PageNotFound from "./pages/PageNotFound";
+import Signup from "./pages/Signup";
+
 
 export default function App() {
   return (
     <Router>
       <Routes>
+        {/* Redirect from "/" to "/login" */}
+        <Route path="/" element={<Navigate to="/login" />} />
+        
         <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
         
         {/* Protect Dashboard Route */}
         <Route
@@ -21,7 +27,7 @@ export default function App() {
         />
 
         {/* Redirect unknown routes */}
-        <Route path="*" element={<NotFound />} />
+        <Route path="*" element={<PageNotFound />} />
       </Routes>
     </Router>
   );

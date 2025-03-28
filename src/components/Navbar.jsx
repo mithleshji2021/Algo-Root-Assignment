@@ -36,7 +36,7 @@ export default function Navbar() {
     return (
         <nav className="bg-blue-600 text-white flex justify-between items-center px-6 py-3 w-full shadow-lg">
             {/* Logo */}
-            <img src="public/algoRoot logo.png" alt="Logo"  width={40} className="ml-8 md:ml-0"/>
+            <img src="src/assets/algoRoot logo.png" alt="Logo"  width={40} className="ml-8 md:ml-0"/>
             
 
             {/* User Dropdown */}
