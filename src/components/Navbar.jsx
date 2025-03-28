@@ -2,7 +2,6 @@ import { useState, useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import { FaUserCircle } from "react-icons/fa";
-import logo from "../public/algoRoot logo.png";
 
 export default function Navbar() {
     const { user, logout, deleteAccount } = useAuth();
@@ -37,7 +36,7 @@ export default function Navbar() {
     return (
         <nav className="bg-blue-600 text-white flex justify-between items-center px-6 py-3 w-full shadow-lg">
             {/* Logo */}
-            <img src={logo} alt="Logo"  width={40} className="ml-8 md:ml-0"/>
+            <img src="public/algoRoot logo.png" alt="Logo"  width={40} className="ml-8 md:ml-0"/>
             
 
             {/* User Dropdown */}
